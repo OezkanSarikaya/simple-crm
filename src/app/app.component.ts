@@ -4,6 +4,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    MatTooltipModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

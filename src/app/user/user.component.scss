@@ -1,0 +1,27 @@
+.add-user-btn {
+  position: absolute;
+  right: 56px;
+  bottom: 56px;
+}
+th {
+  text-align: left;
+}
+td,
+th {
+  padding: 16px;
+}
+table {
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+tr:hover:not(:first-child) {
+  background-color: #673ab7;
+  color: white;
+}
+
+tr:not(:first-child) {
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
+}

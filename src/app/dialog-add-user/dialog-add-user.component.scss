@@ -1,0 +1,63 @@
+
+
+
+
+.dialog{
+    // background-color:rgb(207, 207, 207) !important;
+    padding:24px;
+    // height:100%;
+    // position: relative;
+}
+
+// .progressBar {
+
+//     position: absolute;
+//     top:0;
+//     left:0;
+//     right:0;
+// }
+.full-width {
+    width:100%;
+}
+
+.mr-16 {
+    margin-right:16px;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialogBtns {
+
+    display: flex;
+    justify-content: center;
+    gap:16px;
+}
+
+
+// Define a light theme
+// $light-theme: mat.m2-define-light-theme((
+//  color: (
+//    primary: mat.m2-define-palette(mat.$m2-indigo-palette),
+//    accent: mat.m2-define-palette(mat.$m2-pink-palette),
+//  ),
+// ));
+
+// @include mat.core-theme($light-theme);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
