@@ -2,3 +2,29 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dialog{
+
+    padding:24px;
+
+}
+
+.full-width {
+    width:100%;
+}
+
+.mr-16 {
+    margin-right:16px;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialogBtns {
+
+    display: flex;
+    justify-content: center;
+    gap:16px;
+}

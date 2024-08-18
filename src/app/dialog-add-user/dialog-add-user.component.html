@@ -3,6 +3,7 @@
   class="progressBar"
   mode="indeterminate"
 ></mat-progress-bar>
+
 <div class="dialog">
   <h1 mat-dialog-title>Add user</h1>
   <div mat-dialog-content>
@@ -25,6 +26,20 @@
           <input [disabled]="loading" [(ngModel)]="user.lastName" matInput placeholder="Last Name" />
           <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
           <!-- <mat-hint>Please enter your last Name</mat-hint> -->
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline" class="mr-16" class="full-width">
+          <mat-label>E-Mail</mat-label>
+          <input
+          [disabled]="loading"
+            [(ngModel)]="user.email"
+            matInput
+            placeholder="E-Mail"
+          />
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <!-- <mat-hint>Please enter your first Name</mat-hint> -->
         </mat-form-field>
       </p>
 
@@ -76,7 +91,7 @@
   </div>
 
   <div mat-dialog-actions class="dialogBtns">
-    <button [disabled]="loading" mat-raised-button>Cancel</button>
+    <button [disabled]="loading" mat-raised-button (click)="dialogRef.close()">Cancel</button>
     <button [disabled]="loading" mat-raised-button (click)="saveUser()">Save</button>
   </div>
 </div>

@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Observable } from 'rxjs';
 import { User } from '../../models/user.class';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -25,6 +26,7 @@ import { CommonModule } from '@angular/common';
     MatDialogModule,
     MatCardModule,
     CommonModule,
+    RouterModule
   ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
@@ -42,9 +44,18 @@ export class UserComponent {
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
   position = new FormControl(this.positionOptions[1]);
 
+  userId?: string;
+  route: any;
+
+  // ngOnInit(): void {
+  //   this.userId = this.route.snapshot.paramMap.get('id')!;
+  //   // Verwende userId, um Details des Benutzers zu laden
+  //   console.log(this.userId);
+  // }
+
   openDialog() {
     this.dialog.open(DialogAddUserComponent, {
-      height: '500px',
+      height: '600px',
       width: '500px',
     });
   }

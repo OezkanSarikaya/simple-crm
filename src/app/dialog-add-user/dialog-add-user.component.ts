@@ -9,9 +9,8 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { User } from '../../models/user.class';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -25,22 +24,18 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatDatepickerModule,
     MatProgressBarModule,
-    CommonModule,  
-
+    CommonModule,
   ],
   templateUrl: './dialog-add-user.component.html',
   styleUrl: './dialog-add-user.component.scss',
 })
 export class DialogAddUserComponent {
+  
   user = new User();
   birthDate?: Date;
   loading = false;
 
-  constructor(
-    public dialogRef: MatDialogRef<DialogAddUserComponent>
-
-
-  ) {}
+  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>) {}
 
   private firestore: Firestore = inject(Firestore);
 
