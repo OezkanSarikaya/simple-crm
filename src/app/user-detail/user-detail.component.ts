@@ -49,26 +49,36 @@ export class UserDetailComponent {
   editMenu() {}
 
   openAddressDialog() {
-    // console.log('test');
     
     const dialog = this.dialog.open(DialogEditAddressComponent, {
       data: this.user,
-      height: '600px',
-      width: '500px',
+      // width: '500px',
     });
-    dialog.componentInstance.user = this.user;
 
+    dialog.componentInstance.user = new User(this.user);
+    dialog.componentInstance.userId = this.userId;
+
+    dialog.afterClosed().subscribe((updatedUser: User) => {
+      if (updatedUser) {
+        this.user = updatedUser; // Aktualisiere die User-Daten in der Komponente
+      }
+    });
     
   }
 
-  openUserDialog() {
-    // console.log('test');
-    
-    const dialogUser = this.dialog.open(DialogEditUserComponent, {
-      height: '600px',
-      width: '500px',
+  openUserDialog() {    
+    const dialog = this.dialog.open(DialogEditUserComponent, {
+      // width: '500px',
     });
-    dialogUser.componentInstance.user = this.user;
+  
+    dialog.componentInstance.user = new User(this.user);
+    dialog.componentInstance.userId = this.userId;
+
+    dialog.afterClosed().subscribe((updatedUser: User) => {
+      if (updatedUser) {
+        this.user = updatedUser; // Aktualisiere die User-Daten in der Komponente
+      }
+    });
   }
 
   ngOnInit(): void {

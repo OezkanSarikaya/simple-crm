@@ -55,7 +55,7 @@ export class UserComponent {
 
   openDialog() {
     this.dialog.open(DialogAddUserComponent, {
-      height: '600px',
+      // height: '600px',
       width: '500px',
     });
   }
