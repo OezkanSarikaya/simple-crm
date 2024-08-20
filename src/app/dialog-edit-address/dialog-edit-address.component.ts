@@ -22,7 +22,8 @@ import { Firestore,collection,doc, setDoc, updateDoc } from '@angular/fire/fires
     FormsModule,
     CommonModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    
     // UserDetailComponent,
   ],
   templateUrl: './dialog-edit-address.component.html',

@@ -24,5 +24,5 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'simple-crm';
+
 }
